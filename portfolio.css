@@ -51,7 +51,6 @@
     padding: 0 20px;
   }
   
-  /* Navigation */
   .nav-header {
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(./mac.jpg);
@@ -122,7 +121,7 @@
     width: 100%;
   }
   
-  /* Hero Section */
+
   .hero {
     flex: 1;
     display: flex;
@@ -201,7 +200,7 @@
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
   }
   
-  /* Scroll Indicator */
+
   .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -240,7 +239,7 @@
     color: var(--color-text);
   }
   
-  /* About Section */
+
   .about {
     background: linear-gradient(135deg, var(--color-bg-alt) 0%, rgba(102, 126, 234, 0.05) 100%);
   }
@@ -282,7 +281,7 @@
     box-shadow: var(--shadow-lg);
   }
   
-  /* Skills Section */
+ 
   .skills {
     background: var(--color-bg);
   }
@@ -442,7 +441,7 @@
     background: #00d4ff;
   }
   
-  /* Contact Section */
+  
   .contact {
     background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
     text-align: center;
@@ -489,7 +488,7 @@
     height: 20px;
   }
   
-  /* Footer */
+
   .footer {
     background: var(--color-text);
     color: rgba(255, 255, 255, 0.8);
@@ -508,7 +507,7 @@
     opacity: 0.7;
   }
   
-  /* Theme Toggle Button */
+ 
   .theme-toggle {
     position: fixed;
     bottom: 30px;
@@ -538,7 +537,7 @@
     background: var(--color-secondary);
   }
   
-  /* Animations */
+ 
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -562,7 +561,7 @@
     }
   }
   
-  /* Scrollbar Styles */
+
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -592,7 +591,6 @@
     }
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .nav-items {
       flex-direction: column;
