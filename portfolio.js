@@ -1,4 +1,4 @@
-// ===== Smooth Scrolling for Nav Links =====
+
 document.querySelectorAll("a[href^='#']").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
@@ -13,7 +13,7 @@ document.querySelectorAll("a[href^='#']").forEach(link => {
     });
   });
   
-  // ===== Active Nav Link on Scroll =====
+  
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
   
@@ -40,12 +40,12 @@ document.querySelectorAll("a[href^='#']").forEach(link => {
   window.addEventListener("scroll", updateActiveLink);
   window.addEventListener("load", updateActiveLink);
   
-  // ===== Dark / Light Theme Toggle =====
+
   const initializeTheme = () => {
     const themeToggle = document.getElementById("themeToggle");
     if (!themeToggle) return;
     
-    // Check for saved theme preference or default to light mode
+  
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedTheme = localStorage.getItem("theme");
     
@@ -65,9 +65,8 @@ document.querySelectorAll("a[href^='#']").forEach(link => {
     });
   };
   
-  // ===== Typed.js Initialization =====
   const initializeTyped = () => {
-    // Only initialize if Typed.js is loaded and element exists
+    
     if (typeof Typed !== "undefined" && document.querySelector(".auto-type")) {
       new Typed(".auto-type", {
         strings: ["Developer", "Learner", "Problem Solver", "Innovator"],
@@ -79,18 +78,17 @@ document.querySelectorAll("a[href^='#']").forEach(link => {
     }
   };
   
-  // ===== Enhanced Scroll Behavior =====
+  
   const enhanceScrollBehavior = () => {
-    // Update active links on page load
+   
     updateActiveLink();
-    
-    // Smooth scrolling for hash links (backup for older browsers)
+   
     if (!CSS.supports("scroll-behavior", "smooth")) {
       document.documentElement.style.scrollBehavior = "auto";
     }
   };
   
-  // ===== Performance Optimized Scroll Listener =====
+
   let ticking = false;
   
   const handleScroll = () => {
@@ -105,37 +103,36 @@ document.querySelectorAll("a[href^='#']").forEach(link => {
   
   window.addEventListener("scroll", handleScroll, { passive: true });
   
-  // ===== Initialize All Features =====
+
   document.addEventListener("DOMContentLoaded", () => {
-    // Initialize in order
+   
     initializeTheme();
     initializeTyped();
     enhanceScrollBehavior();
   });
   
-  // ===== Fallback for older browsers =====
+
   window.addEventListener("load", () => {
-    // Ensure typed.js loads even if DOMContentLoaded missed it
+
     if (typeof Typed !== "undefined" && !document.querySelector(".auto-type").classList.contains("typed-enabled")) {
       initializeTyped();
       document.querySelector(".auto-type").classList.add("typed-enabled");
     }
   });
   
-  // ===== Accessibility: Reduce Motion Support =====
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) {
     document.documentElement.style.scrollBehavior = "auto";
   }
   
-  // ===== Keyboard Navigation Enhancement =====
+ 
   document.addEventListener("keydown", (e) => {
-    // Skip to main content with keyboard shortcut (Alt + M)
+ 
     if (e.altKey && e.key === "m") {
       document.querySelector("main")?.focus();
     }
   });
   
-  // ===== Console Message (Optional Fun) =====
+
   console.log("%c👋 Welcome to Vinayak K Huragi's Portfolio!", "color: #667eea; font-size: 16px; font-weight: bold;");
   console.log("%cBuilt with HTML, CSS, and JavaScript", "color: #764ba2; font-size: 12px;");
